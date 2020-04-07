@@ -82,7 +82,7 @@ def load_dataset(args, corpus_type, shuffle):
 
     # Sort the glob output by file name (by increasing indexes).
     # pts = sorted(glob.glob(args.bert_data_path + '.' + corpus_type + '.[0-9]*.pt'))
-    pts = sorted(glob.glob('/content/PreSumm/bert_data/xsum.train.0.bert.pt')
+    pts = sorted(glob.glob(args.bert_data_path + '/[a~z]*.' + corpus_type + '.[0~9]*.bert.pt'))
     if pts:
         if (shuffle):
             random.shuffle(pts)
