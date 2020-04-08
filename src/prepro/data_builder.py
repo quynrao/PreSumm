@@ -297,6 +297,8 @@ def _format_to_bert(params):
     if (os.path.exists(save_file)):
         logger.info('Ignore %s' % save_file)
         return
+    if not os.path.isdir(args.save_path):
+          os.mkdir(args.save_path)
 
     bert = BertData(args)
 
